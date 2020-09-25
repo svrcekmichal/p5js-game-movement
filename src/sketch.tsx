@@ -1,13 +1,17 @@
 import React, { FC } from 'react'
 import P5Wrapper from 'react-p5-wrapper'
 import P5 from "p5"
-import {drawPlayer} from "./player";
-
+import {createPlayer} from "./player";
 import { setup, windowResized } from './setup'
+import {colors} from "./constants/color-palette";
+import {drawFramerate} from "./framerate";
+
+const player = createPlayer(100, 100, colors.lightGreen)
 
 const draw = (p: P5) => () => {
 	p.background(0)
-	drawPlayer(p)
+	player.draw(p)
+	drawFramerate(p)
 }
 
 const sketch = (p: P5) => {
