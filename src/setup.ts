@@ -1,9 +1,11 @@
-export const setup = () => {
-  createCanvas(window.innerWidth, window.innerHeight);
-  strokeWeight(20.0);
-  stroke(255, 100);
+import P5 from "p5";
+
+export const setup = (p: P5) => () => {
+  p.createCanvas(window.innerWidth, window.innerHeight);
+  p.strokeWeight(20.0);
+  p.stroke(255, 100);
 }
 
-export const windowResized = () => {
-  resizeCanvas(window.innerWidth, window.innerHeight)
+export const windowResized = (p: P5) => () => {
+  p.resizeCanvas(window.innerWidth, window.innerHeight)
 }
