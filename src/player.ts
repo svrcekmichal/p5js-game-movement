@@ -1,5 +1,6 @@
 import P5 from "p5"
 import {getMovement} from "./movement";
+import {Color} from "./constants/color-palette";
 
 interface PlayerPosition {
   x: number
@@ -17,19 +18,23 @@ function getPlayerAngle(p: P5, playerPosition: PlayerPosition) {
   return p.atan2(dy, dx)
 }
 
-export const createPlayer = (x, y, hexaColor: string) => {
+export const createPlayer = (x, y, color: Color) => {
   let playerPosition: PlayerPosition = { x, y }
 
   const draw = (p: P5) => {
     playerPosition = movePlayerPosition(p, playerPosition)
+
     p.push();
-    p.strokeWeight(20.0);
-    p.stroke(255, 100);
-    p.fill(p.color(hexaColor))
+    p.strokeWeight(4);
+    p.stroke(color.dark);
+    p.fill(color.light)
     p.translate(playerPosition.x, playerPosition.y);
-    p.rotate(getPlayerAngle(p, playerPosition));
-    p.ellipse(0 , 0, 20, 20)
-    p.line(0, 0, 30, 0);
+    p.rotate(getPlayerAngle(p, playerPosition))
+    p.ellipse(0 , 0, 40, 40)
+      p.push()
+      p.strokeWeight(20);
+      p.line(0, 0, 30, 0);
+      p.pop();
     p.pop();
   }
 

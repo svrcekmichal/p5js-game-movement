@@ -1,14 +1,18 @@
-export const colors = {
-  black: '#000000',
-  darkGray: '#343a40',
-  lightGray: '#495057',
-  lightRed: '#c92a2a',
-  darkRed: '#be0404',
-  purple: '#5f3dc4',
-  darkBlue: '#364fc7',
-  lightBlue: '#1864ab',
-  darkGreen: '#087f5b',
-  lightGreen: '#5c940d',
-  lightOrange: '#e67700',
-  darkOrange: '#d9480f'
+export interface Color {
+  light: string,
+  dark: string
+}
+
+interface ColorPalette {
+  red: Color
+  green: Color
+  blue: Color
+  orange: Color
+}
+
+export const palette: ColorPalette = {
+  red: { light: "#deacac", dark: "#e84b4b" },
+  green: { light: '#b8e3b4', dark: '#149a06'},
+  blue: { light: '#99c0db', dark: '#127fcb'},
+  orange: { light: '#d9c6b3', dark: '#e09b53'},
 }

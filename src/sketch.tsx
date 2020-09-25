@@ -3,14 +3,14 @@ import P5Wrapper from 'react-p5-wrapper'
 import P5 from "p5"
 import {createPlayer} from "./player";
 import { setup, windowResized } from './setup'
-import {colors} from "./constants/color-palette";
-import {drawFramerate} from "./framerate";
+import { palette } from "./constants/color-palette";
+import { drawFramerate } from "./framerate";
 
-const player = createPlayer(100, 100, colors.lightGreen)
+const playerA = createPlayer(100, 100, palette.blue)
 
 const draw = (p: P5) => () => {
 	p.background(0)
-	player.draw(p)
+	playerA.draw(p)
 	drawFramerate(p)
 }
 
