@@ -8,7 +8,7 @@ Code here is nothing production ready, it's mostly just mixing of some demos/exa
 
 ![](example.gif) 
  
-Controls:  
+Controls: WSAD or ↑↓←→
  
 ## how to run
 
