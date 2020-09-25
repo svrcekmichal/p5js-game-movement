@@ -1,7 +1,7 @@
-import P5 from "p5";
+import P5 from 'p5'
 
 export const setup = (p: P5) => () => {
-  p.createCanvas(window.innerWidth, window.innerHeight);
+  p.createCanvas(window.innerWidth, window.innerHeight)
 }
 
 export const windowResized = (p: P5) => () => {

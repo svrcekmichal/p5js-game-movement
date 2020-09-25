@@ -13,8 +13,8 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="/style.css" />
         </Head>
         <body>
-        <Main />
-        <NextScript />
+          <Main />
+          <NextScript />
         </body>
       </Html>
     )
