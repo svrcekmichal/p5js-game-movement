@@ -6,7 +6,7 @@ import { setup, windowResized } from './setup'
 import { palette } from './constants/color-palette'
 import { drawFramerate } from './framerate'
 
-const playerA = createPlayer(100, 100, palette.blue)
+const playerA = createPlayer(200, 200, palette.blue)
 
 const draw = (p: P5) => () => {
   p.background(0)
