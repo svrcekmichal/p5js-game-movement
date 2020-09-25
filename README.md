@@ -1,8 +1,8 @@
 # p5js game movement
 
-I've always found it fascinating to create some game, so in my poor attempt I'm sometimes playing with libs to find what it can do.
+[LIVE DEMO](https://p5js-game-movement-qfwt2r2ce.vercel.app/)
 
-Code here is nothing production ready, it's mostly just mixing of some demos/examples I found somewhere else.
+I've always found it fascinating to create some game, so in my spare time I'm sometimes playing. Code here is nothing production ready, it's mostly just mixing of some demos/examples I found somewhere else.
  
 ## What it does?
 
