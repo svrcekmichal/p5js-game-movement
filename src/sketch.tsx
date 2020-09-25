@@ -16,6 +16,8 @@ const sketch = (p: P5) => {
 	p.draw = draw(p)
 }
 
-export default () => (
+const Game = () => (
 	<P5Wrapper sketch={sketch} />
 )
+
+export default Game
