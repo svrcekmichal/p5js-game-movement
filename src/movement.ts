@@ -15,18 +15,19 @@ function isDirectionRight(p: P5) {
   return p.keyIsDown(p.RIGHT_ARROW) || p.keyIsDown(68) //D
 }
 
-let speed = 1
+let rawSpeed = 2
 export function getMovement(p: P5): { x: number; y: number } {
-  const twoDirectionSpeed = Math.sqrt((speed * speed) / 2)
   const isUp = isDirectionUp(p)
   const isDown = isDirectionDown(p)
   const isLeft = isDirectionLeft(p)
   const isRight = isDirectionRight(p)
   if (isUp || isDown || isLeft || isRight) {
-    speed = Math.min(speed * 1.2, 6)
+    rawSpeed = Math.min(rawSpeed * 1.2, 12)
   } else {
-    speed = 1
+    rawSpeed = 2
   }
+  const speed = rawSpeed * p.deltaTime / 50
+  const twoDirectionSpeed = Math.sqrt((speed * speed) / 2)
   switch (true) {
     //bi direction movement
     case isUp && isLeft:
