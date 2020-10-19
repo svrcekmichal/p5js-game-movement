@@ -21,4 +21,4 @@ $ yarn start
 
 - bootstraped with [p5-typescript-webpack-starter](https://github.com/expiredliver/p5-typescript-webpack-starter) from [expiredliver](https://github.com/expiredliver)
 - [Interaction - Follow 1 example](https://p5js.org/examples/interaction-follow-1.html) that helped a lot, by Keith Peters
-and a lot of small parts here and there :)
+and a lot of small parts here and there :) test long name
